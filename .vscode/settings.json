@@ -1,4 +1,9 @@
 {
     "editor.defaultFormatter": "ms-python.python",
-    "editor.defaultFoldingRangeProvider": "vscode.ipynb"
+    "editor.defaultFoldingRangeProvider": "vscode.ipynb",
+    "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}/data"
+},
+
 }
+
