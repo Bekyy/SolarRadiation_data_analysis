@@ -107,41 +107,41 @@ def solar_radiation_dashboard():
     # Listing files in the "data" folder
     data_files = [f for f in os.listdir("data") if f.endswith(('.csv', '.xlsx'))]
 
-    # with st.sidebar:
+    with st.sidebar:
         # Dropdown to select the file from the "data" folder
-    selected_file = st.selectbox("Select a file", options=data_files)
+        selected_file = st.selectbox("Select a file", options=data_files)
 
-    if selected_file:
-        # Determine the file type based on the extension
-        file_type = selected_file.split('.')[-1]
+        if selected_file:
+            # Determine the file type based on the extension
+            file_type = selected_file.split('.')[-1]
 
-        # Load data based on the selected file
-        df = load_data(selected_file, file_type)
+            # Load data based on the selected file
+            df = load_data(selected_file, file_type)
 
-        # Convert the 'Timestamp' column to datetime and set it as the index
-        df['Timestamp'] = pd.to_datetime(df['Timestamp'])
-        df = df.set_index('Timestamp')
+            # Convert the 'Timestamp' column to datetime and set it as the index
+            df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+            df = df.set_index('Timestamp')
 
-        # Generate and display the plots in the main section
-        plot_timeseries(df)
-    else:
-        st.info("No file selected", icon="ℹ️")
-        st.stop()
+            # Generate and display the plots in the main section
+            plot_timeseries(df)
+        else:
+            st.info("No file selected", icon="ℹ️")
+            st.stop()
 
 # Function to generate plots based on user input
 def plot_timeseries(df):
     # Sidebar options for the type of plot
-    plot_type = st.selectbox("Select Plot Type", ["Hourly", "Daily", "Weekly", "Monthly"])
+    plot_type = st.sidebar.selectbox("Select Plot Type", ["Hourly", "Daily", "Weekly", "Monthly"])
 
     # Columns to plot
-    columns_to_plot = st.multiselect("Select Columns to Plot", df.columns.tolist())
+    columns_to_plot = st.sidebar.multiselect("Select Columns to Plot", df.columns.tolist())
 
     # Define start and end index for hourly plots (modify as needed)
-    start_index = st.slider("Select Start Index", 0, len(df)-1, 0)
-    end_index = st.slider("Select End Index", 0, len(df)-1, 48)
+    start_index = st.sidebar.slider("Select Start Index", 0, len(df)-1, 0)
+    end_index = st.sidebar.slider("Select End Index", 0, len(df)-1, 48)
 
     # Plot based on user selection
-    if st.button("Generate Plot"):
+    if st.sidebar.button("Generate Plot"):
         if plot_type == "Hourly":
             df = df.resample('H').mean()
             plot_hourly_radiation(df, columns_to_plot, start_index, end_index)
