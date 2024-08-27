@@ -12,3 +12,25 @@ The objective of this project is to conduct an exploratory data analysis (EDA) o
 * Statistical Analysis: Application of statistical techniques to ensure data-driven decision-making, supporting the identification of the best possible sites for solar farms.
 
 * Streamlit Dashboard: An interactive dashboard built with Streamlit to showcase key insights and provide stakeholders with an easy-to-use tool for exploring the analysis results.
+
+##+ Prerequisites
+* Python 3.x: Ensure Python is installed on your system.
+* Virtual Environment: Recommended for managing project dependencies.
+* Required Libraries:
+> pandas: Data manipulation and analysis.
+> numpy: Numerical operations.
+> matplotlib: Data visualization.
+> seaborn: Statistical visualizations.
+
+Installation
+
+1. **Create a virtual environment:**
+
+   On macOS/Linux:
+   ```python -m venv venv source venv/bin/activate```
+   om windows:
+   ```python -m venv venv```
+   ```venv\Scripts\activate```
+
+2. **Install dependencies:**   
+   ``` pip install -r requirements.txt```
