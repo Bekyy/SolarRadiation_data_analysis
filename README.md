@@ -13,7 +13,7 @@ The objective of this project is to conduct an exploratory data analysis (EDA) o
 
 * Streamlit Dashboard: An interactive dashboard built with Streamlit to showcase key insights and provide stakeholders with an easy-to-use tool for exploring the analysis results.
 
-##+ Prerequisites
+## Prerequisites
 * Python 3.x: Ensure Python is installed on your system.
 * Virtual Environment: Recommended for managing project dependencies.
 * Required Libraries:
@@ -27,10 +27,17 @@ Installation
 1. **Create a virtual environment:**
 
    On macOS/Linux:
-   ```python -m venv venv source venv/bin/activate```
-   om windows:
-   ```python -m venv venv```
-   ```venv\Scripts\activate```
+   ```
+   python -m venv venv 
+   source venv/bin/activate
+   ```
+   on windows:
+
+   ```
+   python -m venv venv
+   venv\Scripts\activate
+   ```
 
 2. **Install dependencies:**   
-   ``` pip install -r requirements.txt```
+   ``` pip install -r requirements.txt
+   ```
