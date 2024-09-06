@@ -45,9 +45,11 @@ Installation
    venv\Scripts\activate
    ```
 
-2. **Install dependencies:**   
+2. **Install dependencies:**  
+
    ``` pip install -r requirements.txt
    ```
+   
 **Contributing**
 
 Contributions are welcome!
