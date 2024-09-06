@@ -13,6 +13,13 @@ The objective of this project is to conduct an exploratory data analysis (EDA) o
 
 * Streamlit Dashboard: An interactive dashboard built with Streamlit to showcase key insights and provide stakeholders with an easy-to-use tool for exploring the analysis results.
 
+Check out the interactive dashboard for this project:
+
+[Open Streamlit Dashboard](https://solarradiationdataanalysis.streamlit.app)
+
+<img src="img/image.png" alt="Project Diagram" width="400"/>
+
+
 ## Prerequisites
 * Python 3.x: Ensure Python is installed on your system.
 * Virtual Environment: Recommended for managing project dependencies.
@@ -38,6 +45,15 @@ Installation
    venv\Scripts\activate
    ```
 
-2. **Install dependencies:**   
+2. **Install dependencies:**  
+
    ``` pip install -r requirements.txt
    ```
+   
+**Contributing**
+
+Contributions are welcome!
+
+**License**
+
+This project is licensed under the Apache License. See the LICENSE file for more details.
